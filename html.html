@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function countCharacters() {
+          var maxLength = 15; // Change this value to set the maximum character limit
+          var textField = document.getElementById("text-field");
+          var charactersRemaining = maxLength - textField.value.length;
+          var message = charactersRemaining+" character(s) Reamaining";
+          document.getElementById("character-count").textContent = message;
+        }
+      </script>
+    </head>
+    <body>
+        <div style="background-color: black; width: 300px; height: 100px; padding: 30px">
+        <p style="color:white;">Minimum 15 character</p>
+        <input type="text" id="text-field" maxlength="15" onkeyup="countCharacters()"/>
+      <!-- <textarea id="text-field" maxlength="15" onkeyup="countCharacters()"></textarea> -->
+      <p style="color:white;" id="character-count"> 15 character(s) Reamaining</p>
+    </body>
+    </html>
